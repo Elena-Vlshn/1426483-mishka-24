@@ -10,13 +10,13 @@
 <body class="body">
   <header class="header">
     <nav class="navigation">
-      <a class="navigation__logo logo" href="index.html">
-        <img src="" width="86" height="35" alt="логотип магазина Мишка.">
+      <a class="navigation__logo" href="index.html">
+        <img src="./img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип магазина Мишка.">
       </a>
       <button class="navigation__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="navigation__wrapper">
+      <div class="navigation__wrapper visually-hidden">
         <ul class="navigation__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">
@@ -52,79 +52,79 @@
   </header>
   <main class="main">
     <section class="order">
-      <h1 class="order__title">Вязание на заказ</h1>
+      <h1 class="order__title title">Вязание на заказ</h1>
       <p class="order__subtitle">Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order-form__fieldset fieldset">
-          <legend class="fieldset__legend">Тип</legend>
-          <ul class="fieldset__list">
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="radio" name="type" value="Аксессуар для интерьера" checked>
-                <span class="control__mark"></span>
+          <legend class="fieldset__legend fieldset__legend--type">Тип</legend>
+          <ul class="fieldset__list reset-list">
+            <li class="fieldset__item fieldset__item--radio">
+              <label class="control control--radio">
+                <input class="control__input visually-hidden" type="radio" name="type" value="Аксессуар для интерьера" checked>
+                <span class="control__mark control__mark--radio"></span>
                 <span class="control__label">Аксессуар для интерьера</span>
               </label>
             </li>
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="radio" name="type" value="Детская игрушка">
-                <span class="control__mark"></span>
+            <li class="fieldset__item fieldset__item--radio">
+              <label class="control control--radio">
+                <input class="control__input visually-hidden" type="radio" name="type" value="Детская игрушка">
+                <span class="control__mark control__mark--radio"></span>
                 <span class="control__label">Детская игрушка</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="order-form__fieldset fieldset">
-          <legend class="fieldset__legend">Цвет</legend>
-          <ul class="fieldset__list">
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="checkbox" name="Белый" checked>
-                <span class="control__mark"></span>
+          <legend class="fieldset__legend fieldset__legend--color">Цвет</legend>
+          <ul class="fieldset__list reset-list">
+            <li class="fieldset__item fieldset__item--checkbox">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Белый" checked>
+                <span class="control__mark control__mark--checkbox"></span>
                 <span class="control__label">Белый</span>
               </label>
             </li>
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="checkbox" name="Серый">
-                <span class="control__mark"></span>
+            <li class="fieldset__item fieldset__item--checkbox">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Серый">
+                <span class="control__mark control__mark--checkbox"></span>
                 <span class="control__label">Серый</span>
               </label>
             </li>
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="checkbox" name="Тиффани">
-                <span class="control__mark"></span>
+            <li class="fieldset__item fieldset__item--checkbox">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Тиффани">
+                <span class="control__mark control__mark--checkbox"></span>
                 <span class="control__label">«Тиффани»</span>
               </label>
             </li>
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="checkbox" name="Черный">
-                <span class="control__mark"></span>
+            <li class="fieldset__item fieldset__item--checkbox">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Черный">
+                <span class="control__mark control__mark--checkbox"></span>
                 <span class="control__label">Черный</span>
               </label>
             </li>
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="checkbox" name="Розовый">
-                <span class="control__mark"></span>
+            <li class="fieldset__item fieldset__item--checkbox">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Розовый">
+                <span class="control__mark control__mark--checkbox"></span>
                 <span class="control__label">Розовый</span>
               </label>
             </li>
-            <li class="fieldset__item">
-              <label class="control">
-                <input class="control__input" type="checkbox" name="Оранжевый">
-                <span class="control__mark"></span>
+            <li class="fieldset__item fieldset__item--checkbox">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Оранжевый">
+                <span class="control__mark control__mark--checkbox"></span>
                 <span class="control__label">Оранжевый</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="order-form__fieldset fieldset">
-          <legend class="fieldset__legend">ФИО</legend>
-          <ul class="fieldset__list">
+          <legend class="fieldset__legend fieldset__legend--name">ФИО</legend>
+          <ul class="fieldset__list reset-list">
             <li class="fieldset__item name">
               <label class="name__label" for="name">Имя:</label>
               <input class="name__input" type="text" id="name" placeholder="Введите ваше имя" required>
@@ -154,19 +154,19 @@
           </textarea>
         </div>
         <p class="order-form__comment"><sub>*</sub>Поля обязательны для заполнения</p>
-        <button class="order-form__button" type="submit">Отправить заказ</button>
+        <button class="order-form__button button" type="submit">Отправить заказ</button>
       </form>
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__logo logo" href="index.html">
+    <a class="footer__logo visually-hidden" href="index.html">
       <svg class="logo__svg" width="102" height="34">
         <use xlink:href="#"></use>
       </svg>
     </a>
     <section class="footer__social social">
       <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social__list">
+        <ul class="social__list reset-list">
           <li class="social__item">
             <a class="social__link" href="https://www.instagram.com/htmlacademy">
               <svg class="social__icon" width="16" height="16">
@@ -192,7 +192,7 @@
     </section>
     <div class="footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
     </div>
   </footer>
 </body>

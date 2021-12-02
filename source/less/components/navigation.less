@@ -1,18 +1,27 @@
 .navigation {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
-// .navigation__logo {
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   transform: translate(-50%);
-// }
+.navigation__logo {
+  grid-column: 2/3;
+}
 
 .navigation__toggle {
-  justify-self: flex-end;
-  margin-left: 67px;
+  grid-column: 3/4;
+  justify-self: end;
+}
+
+.navigation__wrapper {
+  width: 100%;
+  background-color: @white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
 }

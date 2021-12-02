@@ -1,0 +1,38 @@
+.control {
+  display: flex;
+  padding-left: 60px;
+  position: relative;
+  align-items: center;
+
+  &--checkbox {
+   min-height: 38px;
+  }
+
+  &--radio {
+    min-height: 42px;
+  }
+}
+
+.control__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.control__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid @grey;
+
+  &--checkbox {
+    width: 38px;
+    height: 38px;
+  }
+
+  &--radio {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+  }
+}

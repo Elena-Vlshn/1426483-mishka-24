@@ -1,0 +1,40 @@
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.fieldset__legend {
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @green;
+
+  &--type {
+    margin-bottom: 30px;
+  }
+
+  &--color {
+    margin-bottom: 25px;
+  }
+
+  &--name {
+    margin-bottom: 29px;
+  }
+}
+
+.fieldset__item {
+  &--radio:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  &--checkbox:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}
+
