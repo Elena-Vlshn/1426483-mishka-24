@@ -1,5 +1,4 @@
 .video {
-  padding: 0 30px;
   margin-bottom: 58px;
 }
 
@@ -8,17 +7,18 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid @border-lightgrey;
-  padding: 21px 0 33px;
+  padding: 21px 0 32px;
 }
 
 .video__title {
   font-size: 17px;
   line-height: 24px;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   padding-left: 90px;
 }
 
 .video__text {
+  max-width: 200px;
   font-size: 13px;
   margin-top: 0;
   margin-bottom: 41px;
@@ -33,6 +33,12 @@
   position: relative;
   display: flex;
   margin-bottom: 35px;
+  background-image: url("../../img/video-mobile.jpg");
+  z-index: 1;
+}
+
+.video__video {
+  opacity: 0;
 }
 
 .video__button {
