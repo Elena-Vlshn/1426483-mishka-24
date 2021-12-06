@@ -1,7 +1,6 @@
 .name {
   display: flex;
   flex-direction: column;
-  padding-bottom: 15px;
   border-bottom: solid 2px @black;
 
   &:not(:last-child) {
@@ -13,13 +12,13 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
-  margin-bottom: 17px;
 }
 
 .name__input {
+  font-family: inherit;
   font-size: 17px;
   line-height: 18px;
-  padding: 0;
+  padding: 17px 0;
   border: none;
-  color: #b3b3b3;
+  color: @placeholder-color;
 }

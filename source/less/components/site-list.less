@@ -1,16 +1,18 @@
-
+.site-list {
+  .reset-list();
+  grid-column: 1/-1;
+}
 
 .site-list__item {
-  border-bottom: solid 1px @border-lightgrey;
+  box-shadow: 0 1px 0 @border-lightgrey;
 }
 
 .site-list__link {
-  text-align: center;
   display: block;
-  padding: 28px 10px 27px;
+  padding: 28px 8px 27px 45px;
   text-decoration: none;
   font-weight: 700;
   font-size: 17px;
-  line-height: 24px;
   color: @black;
+  text-align: start;
 }

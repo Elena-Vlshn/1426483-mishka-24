@@ -1,9 +1,10 @@
-.navigation {
-  padding-left: 30px;
-  padding-right: 30px;
+.navigation__top-menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  box-shadow: inset 0 1px 0 @border-lightgrey, inset 0 -1px 0 @border-lightgrey;
 }
 
 .navigation__logo {
@@ -15,15 +16,13 @@
   justify-self: end;
 }
 
-.navigation__wrapper {
-  width: 100%;
-  background-color: @white;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
 .navigation__list {
+  // display: none;
   display: flex;
   flex-direction: column;
+
+
+  &--open {
+    display: flex;  // модификатор для раскрытия меню
+  }
 }

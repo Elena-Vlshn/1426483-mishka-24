@@ -6,10 +6,10 @@
   height: 100%;
   background: rgba(225, 225, 225, 0.9);
   display: flex;
-}
 
-.modal__close {
-  display: none;
+  &--close {
+    display: none;
+  }
 }
 
 .modal__window {
@@ -50,6 +50,7 @@
 }
 
 .modal__list {
+  .reset-list();
   display: flex;
   justify-content: space-between;
   margin-bottom: 31px;

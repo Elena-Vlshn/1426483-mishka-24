@@ -8,12 +8,28 @@
   }
 }
 
+.fieldset__list {
+  .reset-list();
+}
+
 .fieldset__legend {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
   text-transform: uppercase;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
   color: @green;
+  padding: 0;
+
+  &::after {
+    flex-grow: 1;
+    border-bottom: 1px solid @green;
+    content: "";
+    margin-left: 17px;
+  }
 
   &--type {
     margin-bottom: 30px;
