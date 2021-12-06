@@ -1,0 +1,24 @@
+.name {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 2px @black;
+
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+
+.name__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.name__input {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  padding: 17px 0;
+  border: none;
+  color: @placeholder-color;
+}
