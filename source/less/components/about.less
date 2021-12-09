@@ -32,16 +32,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 85px;
-  }
-}
-
-.about__item-block {
-  @media (min-width: @tablet-width) {
-    min-width: 334px;
+    gap: 50px;
+    max-width: 670px;
   }
 }
 
@@ -90,9 +86,30 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;
+    min-width: 300px;
 
     &:not(:last-child) {
       margin-bottom: 58px;
+    }
+
+    &--style {
+      order: 3;
+    }
+
+    &--like {
+      order: 5;
+    }
+
+    &--ball {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
+    &--box {
+      order: 5;
     }
   }
 }

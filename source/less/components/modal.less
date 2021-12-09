@@ -18,6 +18,10 @@
   background-color: @white;
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 92px 46px;
+  }
 }
 
 .modal__content {
@@ -27,13 +31,21 @@
 }
 
 .modal__title {
-  max-width: 176px;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  .title();
+  min-width: 176px;
   text-transform: uppercase;
-  color: @black;
   margin-bottom: 14px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 57px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+  }
 }
 
 .modal__form {
@@ -47,6 +59,11 @@
   line-height: 30px;
   margin-top: 0;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    margin-bottom: 19px;
+  }
 }
 
 .modal__list {
@@ -63,5 +80,9 @@
 
   &:not(:last-child) {
     margin-right: 7px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
   }
 }
