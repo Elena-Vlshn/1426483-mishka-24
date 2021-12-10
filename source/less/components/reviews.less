@@ -7,6 +7,15 @@
     padding-top: 82px;
     padding-bottom: 47px;
     margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 96px;
+  }
+}
+
+.reviews__grid {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 175px;
     row-gap: 38px;
@@ -15,7 +24,7 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 175px;
-    padding-bottom: 96px;
+    padding-right: 0;
   }
 }
 
@@ -44,5 +53,7 @@
     padding: 16px 26px;
     font-size: 17px;
     align-self: start;
+    grid-column: 2/3;
+    grid-row: 1/-1;
   }
 }

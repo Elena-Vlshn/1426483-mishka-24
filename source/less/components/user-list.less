@@ -1,13 +1,17 @@
 .user-list {
   .reset-list();
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     display: flex;
   }
 }
 
 .user-list__item {
   border-bottom: solid 1px @border-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+  }
 }
 
 .user-list__link {
