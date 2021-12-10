@@ -6,12 +6,27 @@
   &:not(:last-child) {
     margin-bottom: 22px;
   }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .name__label {
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 24px;
+  }
 }
 
 .name__input {
@@ -21,4 +36,9 @@
   padding: 17px 0;
   border: none;
   color: @placeholder-color;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: solid 2px @black;
+    width: 100%;
+  }
 }

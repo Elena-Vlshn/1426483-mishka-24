@@ -1,9 +1,50 @@
 .featured {
-  margin-bottom: 42px;
+  margin-bottom: 36px;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
+    grid-template-columns: 175px 1fr;
+  }
+}
+
+.featured__title-wrapper {
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 37px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    z-index: 1;
+    padding-top: 61px;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 175px 1fr;
+  }
 }
 
 .featured__title {
   margin-bottom: 3px;
+  .title();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
 }
 
 .featured__subtitle {
@@ -13,17 +54,63 @@
   color: @green;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 17px;
+    max-width: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+.featured__description {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: minmax(292px, 1fr) minmax(334px, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 17px;
+    grid-row: 1/-1;
+    grid-column: 2/3;
+    column-gap: 58px;
+  }
 }
 
 .featured__text {
   margin: 0;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 155px;
+    margin-bottom: 60px;
+  }
 }
 
 .featured__list {
   margin: 0;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 109px;
+  }
 }
 
 .featured__list-wrap {
@@ -45,6 +132,14 @@
 .featured__img {
   display: block;
   margin-bottom: 25px;
+  max-width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    margin-bottom: 0;
+  }
 }
 
 .featured__price {
@@ -53,4 +148,19 @@
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+    font-size: 20px;
+    justify-self: center;
+  }
+}
+
+.featured-button {
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    width: 292px;
+    justify-self: center;
+    align-self: center;
+  }
 }

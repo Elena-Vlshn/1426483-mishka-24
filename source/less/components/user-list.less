@@ -1,10 +1,17 @@
 .user-list {
   .reset-list();
-  grid-column: 1/-1;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .user-list__item {
   border-bottom: solid 1px @border-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+  }
 }
 
 .user-list__link {
@@ -15,4 +22,9 @@
   font-size: 17px;
   color: @black;
   text-align: start;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    padding: 20px 20px 20px 0;
+  }
 }

@@ -1,16 +1,37 @@
-.slider__content {
-  margin: 0;
+.slider {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+  }
 }
 
 .slider__list {
   .reset-list();
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.slider__content {
+  margin: 0;
 }
 
 .slider__text {
   font-size: 15px;
   line-height: 30px;
-  margin: 0;
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+    padding-right: 100px;
+  }
 }
 
 .slider__author {
@@ -18,5 +39,38 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 30px;
+  }
+}
+
+.slider__control {
+  display: flex;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-end;
+    justify-self: center;
+    width: 175px;
+  }
+}
+
+.slider__button {
+  width: 130px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &--prev {
+    background-image: url("../img/huge-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/huge-arrow-right.svg");
+  }
 }

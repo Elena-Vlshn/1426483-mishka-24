@@ -1,10 +1,17 @@
 .site-list {
   .reset-list();
-  grid-column: 1/-1;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
 }
 
 .site-list__item {
   box-shadow: 0 1px 0 @border-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+  }
 }
 
 .site-list__link {
@@ -15,4 +22,14 @@
   font-size: 17px;
   color: @black;
   text-align: start;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    padding: 20px 20px 20px 0;
+    min-width: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 185px;
+  }
 }
