@@ -4,13 +4,11 @@
   margin-bottom: 55px;
 }
 
-.order__title {
-  .title();
-  font-size: 27px;
+.order__title-wrapper {
+  display: flex;
   padding-top: 74px;
   padding-bottom: 74px;
   background-color: @light-grey;
-  text-align: center;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
@@ -22,23 +20,45 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 98px;
     padding-top: 102px;
-    padding-bottom: 96px;
+    padding-bottom: 79px;
+  }
+}
+
+.order__title {
+  .title();
+  font-size: 27px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.order__subtitle-wrapper {
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
   }
 }
 
 .order__subtitle {
   font-size: 13px;
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 700px;
-    margin: 0 auto 63px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+}
+
+.order-form__fieldset {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -77,8 +97,12 @@
       margin-bottom: 0;
     }
   }
-}
 
+  @media (min-width: @desktop-width) {
+    padding-left: 55px;
+    width: 175px;
+  }
+}
 
 .order-form__input {
   font-family: inherit;
@@ -133,56 +157,46 @@
   }
 }
 
-.order-form__block {
+.order-form__block-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.order-form__block {
   margin-bottom: 34px;
 
-  &--tel {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  &--email {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   &--dop {
-    border: none;
+    margin-bottom: 55px;
   }
-
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    padding-left: 50px;
-    padding-right: 50px;
     flex-direction: row;
-    justify-content: space-between;
+    background-color: @light-grey;
 
     &--tel {
       padding-top: 50px;
-      padding-bottom: 24px;
-      background-color: @light-grey;
+      padding-bottom: 12px;
     }
 
     &--email {
+      padding-top: 12px;
       padding-bottom: 50px;
       margin-bottom: 50px;
-      background-color: @light-grey;
     }
 
     &--dop {
-      padding-left: 0;
-      padding-right: 0;
+      background-color: @white;
       margin-bottom: 53px;
+      flex-direction: row;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 100px;
-    padding-right: 175px;
-
     &--dop {
       margin-bottom: 49px;
       padding-left: 50px;
@@ -235,6 +249,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 100px;
   }
 }
 
