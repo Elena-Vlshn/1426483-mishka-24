@@ -2,20 +2,16 @@
   margin-bottom: 45px;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/review.png");
-    background-repeat: no-repeat;
-    padding-top: 82px;
-    padding-bottom: 47px;
     margin-bottom: 68px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 96px;
   }
 }
 
 .reviews__grid {
   @media (min-width: @tablet-width) {
+    background-image: url("../img/review.png");
+    background-repeat: no-repeat;
+    padding-top: 82px;
+    padding-bottom: 47px;
     display: grid;
     grid-template-columns: 1fr 175px;
     row-gap: 38px;
@@ -23,8 +19,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 175px;
-    padding-right: 0;
+    padding: 78px 0 96px 175px;
   }
 }
 
