@@ -73,8 +73,8 @@
       </div>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order-form__fieldset fieldset container">
+          <legend class="fieldset__legend fieldset__legend--type">Тип</legend>
           <div class="fieldset__wrapper">
-            <legend class="fieldset__legend fieldset__legend--type">Тип</legend>
             <ul class="fieldset__list">
               <li class="fieldset__item fieldset__item--radio">
                 <label class="control control--radio">
@@ -93,74 +93,76 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="order-form__fieldset fieldset fieldset--wide">
-          <div class="fieldset__wrapper container">
+        <div class="order-form__fieldset fieldset--wide">
+          <fieldset class="fieldset container">
             <legend class="fieldset__legend fieldset__legend--color">Цвет</legend>
-            <ul class="fieldset__list fieldset__list--color">
-              <li class="fieldset__item fieldset__item--checkbox">
-                <label class="control control--checkbox">
-                  <input class="control__input visually-hidden" type="checkbox" name="Белый" checked>
-                  <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__label">Белый</span>
-                </label>
-              </li>
-              <li class="fieldset__item fieldset__item--checkbox">
-                <label class="control control--checkbox">
-                  <input class="control__input visually-hidden" type="checkbox" name="Серый">
-                  <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__label">Серый</span>
-                </label>
-              </li>
-              <li class="fieldset__item fieldset__item--checkbox">
-                <label class="control control--checkbox">
-                  <input class="control__input visually-hidden" type="checkbox" name="Тиффани">
-                  <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__label">«Тиффани»</span>
-                </label>
-              </li>
-              <li class="fieldset__item fieldset__item--checkbox">
-                <label class="control control--checkbox">
-                  <input class="control__input visually-hidden" type="checkbox" name="Черный">
-                  <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__label">Черный</span>
-                </label>
-              </li>
-              <li class="fieldset__item fieldset__item--checkbox">
-                <label class="control control--checkbox">
-                  <input class="control__input visually-hidden" type="checkbox" name="Розовый">
-                  <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__label">Розовый</span>
-                </label>
-              </li>
-              <li class="fieldset__item fieldset__item--checkbox">
-                <label class="control control--checkbox">
-                  <input class="control__input visually-hidden" type="checkbox" name="Оранжевый">
-                  <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__label">Оранжевый</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-          <fieldset class="order-form__fieldset fieldset container">
-            <div class="fieldset__wrapper">
-              <legend class="fieldset__legend fieldset__legend--name">ФИО</legend>
-              <ul class="fieldset__list">
-                <li class="fieldset__item name">
-                  <label class="name__label" for="name">Имя:</label>
-                  <input class="name__input" type="text" id="name" placeholder="Введите ваше имя" required>
+            <div class="fieldset__wrapper fieldset__wrapper--wide">
+              <ul class="fieldset__list fieldset__list--color">
+                <li class="fieldset__item fieldset__item--checkbox">
+                  <label class="control control--checkbox">
+                    <input class="control__input visually-hidden" type="checkbox" name="Белый" checked>
+                    <span class="control__mark control__mark--checkbox"></span>
+                    <span class="control__label">Белый</span>
+                  </label>
                 </li>
-                <li class="fieldset__item name">
-                  <label class="name__label" for="surname">Фамилия:</label>
-                  <input class="name__input" type="text" id="surname" placeholder="Укажите фамилию" required>
+                <li class="fieldset__item fieldset__item--checkbox">
+                  <label class="control control--checkbox">
+                    <input class="control__input visually-hidden" type="checkbox" name="Серый">
+                    <span class="control__mark control__mark--checkbox"></span>
+                    <span class="control__label">Серый</span>
+                  </label>
                 </li>
-                <li class="fieldset__item name">
-                  <label class="name__label" for="middle-name">Отчество:</label>
-                  <input class="name__input" type="text" id="middle-name" placeholder="Отчество, если желаете">
+                <li class="fieldset__item fieldset__item--checkbox">
+                  <label class="control control--checkbox">
+                    <input class="control__input visually-hidden" type="checkbox" name="Тиффани">
+                    <span class="control__mark control__mark--checkbox"></span>
+                    <span class="control__label">«Тиффани»</span>
+                  </label>
+                </li>
+                <li class="fieldset__item fieldset__item--checkbox">
+                  <label class="control control--checkbox">
+                    <input class="control__input visually-hidden" type="checkbox" name="Черный">
+                    <span class="control__mark control__mark--checkbox"></span>
+                    <span class="control__label">Черный</span>
+                  </label>
+                </li>
+                <li class="fieldset__item fieldset__item--checkbox">
+                  <label class="control control--checkbox">
+                    <input class="control__input visually-hidden" type="checkbox" name="Розовый">
+                    <span class="control__mark control__mark--checkbox"></span>
+                    <span class="control__label">Розовый</span>
+                  </label>
+                </li>
+                <li class="fieldset__item fieldset__item--checkbox">
+                  <label class="control control--checkbox">
+                    <input class="control__input visually-hidden" type="checkbox" name="Оранжевый">
+                    <span class="control__mark control__mark--checkbox"></span>
+                    <span class="control__label">Оранжевый</span>
+                  </label>
                 </li>
               </ul>
             </div>
           </fieldset>
+        </div>
+        <fieldset class="order-form__fieldset fieldset container">
+          <legend class="fieldset__legend fieldset__legend--name">ФИО</legend>
+          <div class="fieldset__wrapper">
+            <ul class="fieldset__list">
+              <li class="fieldset__item name">
+                <label class="name__label" for="name">Имя:</label>
+                <input class="name__input" type="text" id="name" placeholder="Введите ваше имя" required>
+              </li>
+              <li class="fieldset__item name">
+                <label class="name__label" for="surname">Фамилия:</label>
+                <input class="name__input" type="text" id="surname" placeholder="Укажите фамилию" required>
+              </li>
+              <li class="fieldset__item name">
+                <label class="name__label" for="middle-name">Отчество:</label>
+                <input class="name__input" type="text" id="middle-name" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+          </div>
+        </fieldset>
         <div class="order-form__block order-form__block--tel">
           <div class="order-form__block-wrapper container">
             <label class="order-form__label order-form__label--tel" for="tel">тел<span></span></label>

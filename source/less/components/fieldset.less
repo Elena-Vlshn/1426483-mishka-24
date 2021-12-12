@@ -6,6 +6,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
+
     &--wide {
       background-color: @light-grey;
       padding: 50px 0;
@@ -15,7 +17,11 @@
 
 .fieldset__wrapper {
   @media (min-width: @tablet-width) {
-    display: flex;
+    padding-left: 168px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
   }
 }
 
@@ -25,7 +31,6 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 500px;
 
     &--color {
       flex-direction: row;
@@ -43,6 +48,7 @@
 }
 
 .fieldset__legend {
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,17 +79,26 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 17px;
+    left: 50px;
     margin-bottom: 0;
-    width: 170px;
 
     &::after {
       display: none;
     }
+
+    &--color {
+      top: 65px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 175px;
-    padding-left: 55px;
+    left: 105px;
+
+    &--color {
+      left: 105px;
+    }
   }
 }
 
@@ -102,7 +117,7 @@
     }
 
     &--checkbox {
-      width: 245px;
+      width: 50%;
     }
   }
 
