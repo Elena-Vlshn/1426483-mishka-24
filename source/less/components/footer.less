@@ -5,10 +5,16 @@
 .footer__wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 23px;
+
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 58px;
   }
 }
 
@@ -18,16 +24,33 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  &:hover {
+    path {
+      fill: @hover-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__social {
-  padding-top: 25px;
-  padding-bottom: 32px;
+  padding-bottom: 22px;
   border-bottom: solid 1px @border-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    border: none;
+  }
 }
 
 .footer__copyright {
-  padding-top: 22px;
-  padding-bottom: 23px;
+  padding-top: 21px;
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }

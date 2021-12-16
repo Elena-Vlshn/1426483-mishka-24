@@ -1,12 +1,12 @@
 .navigation {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 347px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 404px  1fr 347px;
   }
 }
 
@@ -16,7 +16,6 @@
   align-items: center;
   padding-top: 22px;
   padding-bottom: 18px;
-  box-shadow: inset 0 1px 0 @border-lightgrey, inset 0 -1px 0 @border-lightgrey;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 20px;
@@ -38,13 +37,27 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
+    padding-left: 55px;
   }
 }
 
 .navigation__toggle {
   grid-column: 3/4;
   justify-self: end;
+  border: none;
+  background-image: url("../img/menu.svg");
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+
+  &--closed {
+    background-image: url("../img/menu-close.svg");
+    width: 21px;
+    height: 20px;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -52,20 +65,33 @@
 }
 
 .navigation__list {
-  // display: none;
-  display: flex;
+  display: none;
   flex-direction: column;
 
   &.site-list-add {
     display: none;
   }
 
-
-  &--open {
+  &--opened {
+    width: 100%;
     display: flex;  // модификатор для раскрытия меню
+    position: absolute;
+    z-index: 1;
+    background-color: @white;
+
+    &.site-list {
+      top: 80px;
+      left: 0;
+    }
+
+    &.user-list {
+      left: 0;
+      top: 239px;
+    }
   }
 
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 
@@ -104,5 +130,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 3/4;
+    align-self: end;
   }
 }

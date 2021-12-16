@@ -1,14 +1,16 @@
 .about {
-  padding-top: 30px;
-  margin-bottom: 58px;
+  padding-top: 39px;
+  margin-bottom: 56px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 82px;
+    margin-bottom: 24px;
+    padding-top: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 90px;
-    padding-left: 175px;
+    margin-bottom: 60px;
+    padding-left: 225px;
+    padding-top: 74px;
   }
 }
 
@@ -21,7 +23,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 }
 
@@ -29,14 +31,13 @@
   .reset-list();
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 50px;
+    gap: 30px;
     max-width: 670px;
   }
 }
@@ -56,6 +57,7 @@
   &--flower {
     background-image: url("../img/icon-1.svg");
     background-size: 33px 38px;
+    background-position: 6px top;
   }
 
   &--style {
@@ -66,21 +68,26 @@
   &--like {
     background-image: url("../img/icon-3.svg");
     background-size: 34px 27px;
+    background-position: 5px top;
+    // padding-top: 50px;
   }
 
   &--ball {
     background-image: url("../img/icon-4.svg");
     background-size: 35px 34px;
+    // padding-top: 50px;
   }
 
   &--rocket {
     background-image: url("../img/icon-5.svg");
     background-size: 55px 23px;
+    // padding-top: 50px;
   }
 
   &--box {
     background-image: url("../img/icon-6.svg");
     background-size: 33px 32px;
+    background-position: 2px top;
   }
 
   @media (min-width: @tablet-width) {

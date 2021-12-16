@@ -5,8 +5,28 @@
 .social__list {
   .reset-list();
   margin: 0 auto;
-  min-width: 142px;
+  min-width: 152px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+.social__link {
+  display: flex;
+  padding: 5px;
+
+  &:hover {
+    path {
+      fill: @hover-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icon {
+  display: block;
+  margin: auto;
+}
