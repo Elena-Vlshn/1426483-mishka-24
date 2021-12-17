@@ -1,0 +1,27 @@
+.site-list-add {
+  .reset-list();
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    order: 4;
+
+    &:not(:last-child) {
+      padding-left: 50px;
+    }
+  }
+}
+
+.site-list-add__item {
+  width: 184px;
+}
+
+
+.site-list-add__link {
+  display: block;
+  text-decoration: none;
+  color: @black;
+  font-weight: 700;
+  padding: 20px 0;
+}
+

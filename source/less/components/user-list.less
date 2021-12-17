@@ -1,8 +1,11 @@
 .user-list {
+  background-color: @white;
   .reset-list();
 
   @media (min-width: @tablet-width) {
     display: flex;
+    padding-right: 50px;
+    border-bottom: 1px solid @border-lightgrey;
   }
 }
 
@@ -15,7 +18,7 @@
   @media (min-width: @tablet-width) {
     width: auto;
     padding: 0;
-    border: none;
+    border-top: none;
 
     &--search {
       width: 82px;
@@ -52,11 +55,13 @@
     height: 100%;
 
     &--search {
-      padding: 35px 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &--cart {
-      padding-left: 82px;
+      padding-left: 84px;
     }
   }
 }
@@ -90,7 +95,6 @@
     left: 32px;
 
     &--cart {
-      left: 30px;
       right: auto;
       width: 21px;
       height: 18px;
