@@ -7,12 +7,8 @@ navToggle.addEventListener('click', function() {
     navToggle.classList.remove('navigation__toggle--closed');
     navUser.classList.remove('navigation__list--opened');
     navSite.classList.remove('navigation__list--opened');
-    navUser.classList.add('navigation__list--closed');
-    navSite.classList.add('navigation__list--closed');
   } else {
     navToggle.classList.add('navigation__toggle--closed');
-    navUser.classList.remove('navigation__list--closed');
-    navSite.classList.remove('navigation__list--closed');
     navUser.classList.add('navigation__list--opened');
     navSite.classList.add('navigation__list--opened');
   }
