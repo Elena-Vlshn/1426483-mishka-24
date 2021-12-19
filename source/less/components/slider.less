@@ -11,6 +11,8 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
   }
 }
 
@@ -25,11 +27,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    margin-bottom: 61px;
+    margin-bottom: 57px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 44px;
+    margin-bottom: 38px;
     padding-right: 100px;
   }
 }
@@ -45,6 +48,13 @@
   }
 }
 
+.slider__author-link {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 33px;
+}
+
 .slider__control {
   display: flex;
   margin: 0 auto;
@@ -53,6 +63,8 @@
     align-self: flex-end;
     justify-self: center;
     width: 175px;
+    grid-column: 2;
+    grid-row: 1/-1;
   }
 }
 
@@ -61,16 +73,25 @@
   height: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  border: none;
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+  border: solid 1px @border-lightgrey;
 
   &--prev {
     background-image: url("../img/huge-arrow-left.svg");
+    border-right: none;
   }
 
   &--next {
-    background-image: url("../../img/huge-arrow-right.svg");
+    background-image: url("../img/huge-arrow-right.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

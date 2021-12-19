@@ -1,16 +1,73 @@
 .site-list {
+  background-color: @white;
   .reset-list();
 
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    width: 100%;
+  }
+
   @media (min-width: @tablet-width) {
-    justify-content: space-between;
+    background-color: #f8f8f8;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    background-color: @white;
+    border-bottom: 1px solid @border-lightgrey;
+
+    // &::before {
+    //   content: "";
+    //   background-color: @white;
+    //   width: calc(50vw - 525px);
+    //   height: 88px;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   border-bottom: 1px solid @border-lightgrey;
+    // }
   }
 }
 
 .site-list__item {
-  box-shadow: 0 1px 0 @border-lightgrey;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-top: 1px solid @border-lightgrey;
 
   @media (min-width: @tablet-width) {
-    width: 167px;
+    width: auto;
+    border: none;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 184px;
+    margin: 0;
+
+    &:first-child {
+      &::before {
+        content: "";
+        background-color: @white;
+        width: calc(50vw - 525px);
+        height: 100%;
+        position: absolute;
+        left: calc((50vw - 525px) * -1);
+        top: 0;
+        border-bottom: 1px solid @border-lightgrey;
+      }
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid @border-lightgrey;
+    }
+
+    &.site-list__item--add {
+      border: none;
+    }
   }
 }
 
@@ -23,13 +80,31 @@
   color: @black;
   text-align: start;
 
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 15px;
+    width: 167px;
     padding: 20px 20px 20px 0;
-    min-width: 150px;
+    height: 100%;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 185px;
+    font-size: 17px;
+    padding: 32px 0;
+    height: 100%;
+
+    &--add {
+      font-size: 15px;
+      padding: 19px 0 0;
+      background-color: #f8f8f8;
+      border: none;
+    }
   }
 }

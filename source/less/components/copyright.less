@@ -8,10 +8,20 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
-  margin-right: 27px;
+  margin-right: 25px;
 }
 
 .copyright__link {
   width: 27px;
   height: 34px;
+
+  &:hover {
+    path {
+      fill: @hover-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

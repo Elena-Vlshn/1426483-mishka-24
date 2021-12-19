@@ -1,8 +1,16 @@
 .reviews {
+  display: flex;
   margin-bottom: 45px;
+  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 49px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+    margin-bottom: 35px;
   }
 }
 
@@ -10,16 +18,17 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/review.png");
     background-repeat: no-repeat;
-    padding-top: 82px;
-    padding-bottom: 47px;
+    padding: 78px 50px 50px 47px;
     display: grid;
     grid-template-columns: 1fr 175px;
-    row-gap: 38px;
+    row-gap: 39px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
     padding: 78px 0 96px 175px;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 }
 
@@ -45,7 +54,7 @@
 .reviews__button {
   @media (min-width: @tablet-width) {
     width: 175px;
-    padding: 16px 26px;
+    padding: 14px 26px;
     font-size: 17px;
     align-self: start;
     grid-column: 2/3;
