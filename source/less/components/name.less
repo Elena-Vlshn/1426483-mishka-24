@@ -1,10 +1,9 @@
 .name {
   display: flex;
   flex-direction: column;
-  border-bottom: solid 2px @black;
 
   &:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: @tablet-width) {
@@ -14,7 +13,13 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-bottom: 17px;
     }
   }
 }
@@ -26,19 +31,41 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 24px;
+    font-size: 19px;
   }
 }
 
 .name__input {
   font-family: inherit;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 18px;
-  padding: 17px 0;
+  padding: 17px 0 15px;
   border: none;
-  color: @placeholder-color;
+  border-bottom: solid 2px @grey;
+  color: @grey;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &::placeholder {
+    color: @placeholder-color;
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
 
   @media (min-width: @tablet-width) {
-    border-bottom: solid 2px @black;
     width: 100%;
+    font-size: 19px;
+    padding-bottom: 14px;
+
+    &::placeholder {
+      padding-left: 10px;
+    }
   }
 }

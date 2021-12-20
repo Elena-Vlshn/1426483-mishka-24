@@ -21,9 +21,9 @@
   margin-bottom: 0;
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
   }
 }
 
@@ -60,13 +60,12 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 67px;
-    padding-top: 100px;
+    padding-top: 36px;
     padding-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 111px;
-    padding-top: 102px;
+    margin-bottom: 131px;
     padding-bottom: 79px;
   }
 }
