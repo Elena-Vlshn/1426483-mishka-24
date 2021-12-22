@@ -1,6 +1,9 @@
 .header {
-  background-color: #f8f8f8;
+  background-color: @light-grey;
   color: @black;
   position: relative;
-  // overflow-x: hidden;
+
+  @media (min-width: @tablet-width) {
+    overflow-x: hidden;
+  }
 }
