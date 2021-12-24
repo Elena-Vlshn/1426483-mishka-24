@@ -127,19 +127,43 @@
   background-position: center;
   z-index: 1;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 260px auto;
+  }
+
   @media (min-width: @tablet-width) {
     order: -1;
     margin-bottom: 42px;
+    background-image: url("../img/video-tablet.jpg");
+    background-size: 668px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+      background-size: 668px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     grid-row: 1/-1;
+    background-size: cover;
   }
 }
 
 .video__video {
   opacity: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    grid-row: 1/-1;
+    width: 683px;
+  }
 }
 
 .video__button {

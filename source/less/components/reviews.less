@@ -16,13 +16,18 @@
 
 .reviews__grid {
   @media (min-width: @tablet-width) {
-    background-image: url("../img/review.png");
+    background-image: url("../img/review.jpg");
     background-repeat: no-repeat;
+    background-size: 350px auto;
     padding: 78px 50px 50px 47px;
     display: grid;
     grid-template-columns: 1fr 175px;
     row-gap: 39px;
     align-items: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
