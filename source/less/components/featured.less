@@ -112,6 +112,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+    grid-column: 1/2;
   }
 
   @media (min-width: @desktop-width) {
@@ -151,9 +152,22 @@
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    width: 334px;
+    height: 404px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 636px;
+  }
+}
+
+.featured__wrap {
+  @media (min-width: @tablet-width) {
     grid-column: 2/3;
     grid-row: 1/-1;
-    margin-bottom: 0;
+    align-self: end;
   }
 }
 
@@ -177,5 +191,6 @@
     width: 292px;
     justify-self: center;
     align-self: center;
+    grid-column: 1/2;
   }
 }
