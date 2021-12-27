@@ -2,19 +2,35 @@
   display: flex;
   margin-bottom: 45px;
   padding: 0 30px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 49px;
+    margin-bottom: 148px;
     padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 50px;
-    margin-bottom: 35px;
+    margin-bottom: 161px;
   }
 }
 
 .reviews__grid {
+  padding-bottom: 45px;
+
+  &::after {
+    content: "";
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/review.jpg");
     background-repeat: no-repeat;
@@ -25,6 +41,11 @@
     row-gap: 39px;
     align-items: center;
 
+    &::after {
+      height: 17px;
+      bottom: -80px;
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/review@2x.jpg");
     }
@@ -34,6 +55,11 @@
     padding: 78px 0 96px 175px;
     max-width: 1150px;
     margin: 0 auto;
+
+    &::after {
+      height: 23px;
+      bottom: -88px;
+    }
   }
 }
 
