@@ -7,7 +7,7 @@
 
 .slider__list {
   .reset-list();
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -32,7 +32,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 38px;
+    margin-bottom: 40px;
     padding-right: 100px;
   }
 }
@@ -58,6 +58,7 @@
 .slider__control {
   display: flex;
   margin: 0 auto;
+  max-width: 260px;
 
   @media (min-width: @tablet-width) {
     align-self: flex-end;
@@ -93,5 +94,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    background-position: center 5px;
   }
 }

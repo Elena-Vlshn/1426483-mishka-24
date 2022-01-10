@@ -11,16 +11,21 @@
   margin-right: 25px;
 }
 
+.copyright__svg {
+  fill: @green;
+}
+
+
 .copyright__link {
   width: 27px;
   height: 34px;
-  color: @green;
 
-  &:hover {
-    color: @hover-green;
+  &:hover .copyright__svg {
+    fill: @hover-green;
   }
 
-  &:active {
+  &:active .copyright__svg {
     opacity: 0.3;
   }
 }
+

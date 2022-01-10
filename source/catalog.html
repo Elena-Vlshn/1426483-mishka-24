@@ -9,6 +9,8 @@
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon-180.png" sizes="180x180" type="image/png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Каталог товаров Мишка</title>
 </head>
 <body class="body">
@@ -93,7 +95,7 @@
               <div class="product__price-wrap">
                 <p class="product__price">1 200 руб.</p>
                 <button class="product__basket" type="button">
-                  <svg class="product__cart" width="20" height="19" viewBox="0 0 21 18" aria-hidden="true" focusable="false">
+                  <svg class="product__cart" width="21" height="18" viewBox="0 0 21 18"  aria-hidden="true" focusable="false">
                     <use href="img/sprite.svg#cart"></use>
                   </svg>
                   <span class="visually-hidden">Добавить в корзину.</span>
@@ -121,7 +123,7 @@
               <div class="product__price-wrap">
                 <p class="product__price">690 руб.</p>
                 <button class="product__basket" type="button">
-                  <svg class="product__cart" width="20" height="19" viewBox="0 0 21 18" aria-hidden="true" focusable="false">
+                  <svg class="product__cart" width="21" height="18" viewBox="0 0 21 18"  aria-hidden="true" focusable="false">
                     <use href="img/sprite.svg#cart"></use>
                   </svg>
                   <span class="visually-hidden">Добавить в корзину.</span>
@@ -165,7 +167,9 @@
         <h2 class="video__title">Процесс производства</h2>
         <div class="video__wrap">
           <video class="video__video" width="260"  height="150" src="#" controls></video>
-          <button class="video__button" type="button"></button>
+          <button class="video__button" type="button">
+            <span class="visually-hidden">Кнопка пуск</span>
+          </button>
         </div>
         <p class="video__text">По просьбам наших любимых фолловеров мы
           сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -176,7 +180,7 @@
   <footer class="footer">
     <div class="footer__wrapper container">
       <a class="footer__logo" href="index.html">
-        <svg class="logo-svg logo-svg--footer" width="102" height="34" viewBox="0 0 102 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-svg" width="102" height="34" viewBox="0 0 102 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use href="img/sprite.svg#logo-footer"></use>
         </svg>
       </a>
@@ -209,7 +213,7 @@
       <div class="footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="copyright__svg" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use href="img/sprite.svg#htmlacademy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>

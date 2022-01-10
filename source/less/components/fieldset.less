@@ -10,7 +10,7 @@
 
     &--wide {
       background-color: @light-grey;
-      padding: 50px 0;
+      padding: 50px 0 26px;
     }
   }
 
@@ -24,7 +24,7 @@
 
 .fieldset__wrapper {
   @media (min-width: @tablet-width) {
-    padding-left: 169px;
+    padding-left: 168px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,10 +46,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 738px;
+    width: 700px;
 
     &--color {
-      justify-content: space-between;
+      column-gap: 52px;
+      width: 740px;
     }
   }
 }
@@ -86,7 +87,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 19px;
+    top: 18px;
     left: 50px;
     margin-bottom: 0;
 
@@ -96,11 +97,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 105px;
+    left: 110px;
 
-    &--color {
-      left: 110px;
-    }
+    // &--color {
+    //   left: 110px;
+    // }
   }
 }
 

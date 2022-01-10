@@ -14,18 +14,6 @@
     display: flex;
     border-bottom: 1px solid @border-lightgrey;
     position: relative;
-
-    // вариант с фиксированной высотой
-    // &::after {
-    //   content: "";
-    //   background-color: @white;
-    //   width: 50px;
-    //   height: 88px;
-    //   position: absolute;
-    //   right: 0;
-    //   top: 0;
-    //   border-bottom: 1px solid @border-lightgrey;
-    // }
   }
 
   @media (min-width: @desktop-width) {
@@ -45,6 +33,9 @@
     width: auto;
     padding: 0;
     border-top: none;
+    min-height: 87px;
+    display: flex;
+    align-items: center;
 
     &--search {
       width: 82px;
@@ -69,7 +60,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+
     &--cart {
+      flex-grow: 0;
+
       &::after {
         width: calc(50vw - 525px);
         right: calc((50vw - 525px) * -1);
@@ -98,12 +93,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 32px 0 31px;
-    height: 100%;
 
     &--search {
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     &--cart {

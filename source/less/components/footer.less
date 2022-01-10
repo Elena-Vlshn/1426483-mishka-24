@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 23px;
 
 
@@ -20,14 +20,13 @@
 
 .footer__logo {
   display: none;
-  color: @black;
 
   @media (min-width: @tablet-width) {
     display: block;
   }
 
-  &:hover {
-    color: @hover-green;
+  &:hover .logo-svg {
+    fill: @hover-green;
   }
 
   &:active {
