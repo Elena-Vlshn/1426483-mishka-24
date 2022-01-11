@@ -135,7 +135,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 170px;
+    width: 168px;
 
     &::after {
       display: none;
@@ -155,6 +155,7 @@
 }
 
 .order-form__input {
+  width: 100%;
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
@@ -179,7 +180,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 450px;
     background-color: @light-grey;
     font-size: 19px;
     padding: 13px 0 14px;
@@ -203,7 +203,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 6px;
   border-bottom: solid 2px @grey;
 
   & svg {
@@ -219,8 +218,14 @@
     }
   }
 
+  @media (min-width: @tablet-width) {
+    width: 500px;
+    padding-right: 20px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 700px;
+    padding-right: 0;
   }
 }
 
@@ -251,7 +256,7 @@
     }
 
     &--email {
-      padding-top: 10px;
+      padding-top: 14px;
       padding-bottom: 50px;
       margin-bottom: 50px;
     }
@@ -264,6 +269,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    &--email {
+      padding-top: 9px;
+    }
+
     &--dop {
       margin-bottom: 49px;
       padding-left: 50px;
