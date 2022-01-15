@@ -1,21 +1,21 @@
 .about {
-  padding-top: 36px;
+  padding-top: 40px;
   margin-bottom: 60px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 48px;
-    padding-top: 52px;
+    padding-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
     padding-left: 225px;
-    padding-top: 68px;
+    padding-top: 66px;
   }
 }
 
 .about__title {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   .title();
 
   @media (min-width: @tablet-width) {
@@ -91,7 +91,7 @@
     background-image: url("../img/icon-6.svg");
     background-size: 33px 32px;
     background-position: 2px top;
-    padding-top: 50px;
+    padding-top: 52px;
   }
 
   @media (min-width: @tablet-width) {
@@ -110,6 +110,7 @@
 
     &--like {
       order: 5;
+      padding-top: 48px;
     }
 
     &--ball {
@@ -124,12 +125,17 @@
 
     &--box {
       order: 5;
+      padding-top: 50px;
     }
   }
 
   @media (min-width: @desktop-width) {
     &:not(:last-child) {
       margin-bottom: 28px;
+    }
+
+    &--like {
+      padding-top: 50px;
     }
   }
 }

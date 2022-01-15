@@ -2,17 +2,31 @@
   border-bottom: 1px solid @border-lightgrey;
   position: relative;
 
-  //при добавлении класса navigation--nojs
-  //появляется ткрытое меню в потоке при отключённом JavaScript
-
-  &--nojs {
-    & .navigation__toggle {
-      display: none;
+  @media (max-width: @mobile-width-only) {
+    &--closed {
+      & .site-nav,
+      .user-nav {
+        display: none;
+      }
     }
 
-    & .site-list,
-    .user-list {
-      position: static;
+    &--opened {
+      & .site-nav,
+      .user-nav {
+        display: flex;
+      }
+    }
+
+    &--nojs {
+      & .navigation__toggle {
+        display: none;
+      }
+
+      & .site-nav,
+      .user-nav {
+        display: flex;
+        position: static;
+      }
     }
   }
 
@@ -46,7 +60,6 @@
     border-bottom: 1px solid @border-lightgrey;
     align-self: stretch;
   }
-
 
   @media (min-width: @desktop-width) {
     padding: 6px;
@@ -128,30 +141,13 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  @media (max-width: @mobile-width-only) {
-    &.site-list {
-      display: none;
-    }
-
-    &.user-list {
-      display: none;
-    }
-
-    &--opened {
-      &.site-list,
-      &.user-list {
-        display: flex;
-      }
-    }
-  }
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     align-self: stretch;
     align-items: center;
 
-    &.site-list {
+    &.site-nav {
       order: 2;
       justify-content: start;
       column-gap: 20px;
@@ -159,12 +155,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    &.user-list {
+    &.user-nav {
       order: 3;
       justify-content: flex-end;
     }
 
-    &.site-list {
+    &.site-nav {
       order: 1;
       column-gap: 36px;
     }
