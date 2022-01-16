@@ -7,7 +7,7 @@
 
 .slider__list {
   .reset-list();
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -27,12 +27,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    margin-bottom: 57px;
+    margin-bottom: 59px;
     margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 38px;
+    margin-bottom: 40px;
     padding-right: 100px;
   }
 }
@@ -44,7 +44,7 @@
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
-    line-height: 30px;
+    font-size: 18px;
   }
 }
 
@@ -52,12 +52,13 @@
   display: block;
   font-style: italic;
   font-weight: 400;
-  line-height: 33px;
+  line-height: 35px;
 }
 
 .slider__control {
   display: flex;
   margin: 0 auto;
+  max-width: 260px;
 
   @media (min-width: @tablet-width) {
     align-self: flex-end;
@@ -93,5 +94,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    background-position: center 8px;
   }
 }

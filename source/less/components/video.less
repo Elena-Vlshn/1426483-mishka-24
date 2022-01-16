@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 58px;
+  margin-bottom: 56px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 64px;
@@ -47,6 +47,7 @@
   margin-bottom: 25px;
   padding-left: 90px;
   position: relative;
+  width: 260px;
 
   &::before {
     content: "";
@@ -56,33 +57,38 @@
     width: 32px;
     height: 22px;
     position: absolute;
-    left: 40px;
-    top: -4px;
+    left: 32px;
+    top: 12px;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
-    padding-left: 107px;
-    align-self: start;
-    margin-bottom: 22px;
+    padding-left: 66px;
+    margin-bottom: 24px;
+    width: 584px;
+
+    &::before {
+      left: 0;
+      top: -2px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
-    padding-top: 96px;
+    padding-top: 98px;
     margin-bottom: 0;
     max-width: 200px;
 
     &::before {
       left: 0;
-      top: 46px;
+      top: 49px;
     }
   }
 }
 
 .video__text {
-  max-width: 200px;
+  width: 200px;
   font-size: 13px;
   margin-top: 0;
   margin-bottom: 41px;
@@ -90,12 +96,11 @@
   @media (min-width: @tablet-width) {
     font-size: 15px;
     line-height: 30px;
-    max-width: 610px;
-    padding-left: 12px;
+    width: 584px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 252px;
+    width: 252px;
     margin-bottom: 51px;
     padding-left: 0;
     padding-top: 28px;
@@ -104,7 +109,7 @@
 
 .video__link {
   line-height: 16px;
-  padding: 17px 20px 16px 18px;
+  padding: 16px 18px 16px 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;

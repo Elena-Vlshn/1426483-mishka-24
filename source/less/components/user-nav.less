@@ -1,4 +1,4 @@
-.user-list {
+.user-nav {
   background-color: @white;
   .reset-list();
 
@@ -14,18 +14,6 @@
     display: flex;
     border-bottom: 1px solid @border-lightgrey;
     position: relative;
-
-    // вариант с фиксированной высотой
-    // &::after {
-    //   content: "";
-    //   background-color: @white;
-    //   width: 50px;
-    //   height: 88px;
-    //   position: absolute;
-    //   right: 0;
-    //   top: 0;
-    //   border-bottom: 1px solid @border-lightgrey;
-    // }
   }
 
   @media (min-width: @desktop-width) {
@@ -35,7 +23,7 @@
   }
 }
 
-.user-list__item {
+.user-nav__item {
   width: 100%;
   margin: 0 auto;
   border-top: 1px solid @border-lightgrey;
@@ -45,6 +33,9 @@
     width: auto;
     padding: 0;
     border-top: none;
+    min-height: 87px;
+    display: flex;
+    align-items: center;
 
     &--search {
       width: 82px;
@@ -69,7 +60,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+
     &--cart {
+      flex-grow: 0;
+
       &::after {
         width: calc(50vw - 525px);
         right: calc((50vw - 525px) * -1);
@@ -78,7 +73,7 @@
   }
 }
 
-.user-list__link {
+.user-nav__link {
   display: block;
   padding: 28px 8px 27px 45px;
   text-decoration: none;
@@ -98,12 +93,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 32px 0 31px;
-    height: 100%;
 
     &--search {
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     &--cart {
@@ -112,7 +105,7 @@
   }
 }
 
-.user-list__icon {
+.user-nav__icon {
   position: absolute;
   top: 0;
   right: auto;
@@ -129,7 +122,6 @@
     fill: fade(@green, 30%);
   }
 
-
   @media (min-width: @tablet-width) {
     left: 32px;
 
@@ -141,7 +133,7 @@
   }
 }
 
-.user-list__span {
+.user-nav__span {
   @media (min-width: @tablet-width) {
     &--search {
       display: none;
