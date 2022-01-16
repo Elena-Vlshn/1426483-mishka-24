@@ -3,18 +3,12 @@
   position: relative;
 
   @media (max-width: @mobile-width-only) {
-    &--closed {
-      & .site-nav,
-      .user-nav {
-        display: none;
-      }
+    &--closed .navigation__mobile {
+      display: none;
     }
 
-    &--opened {
-      & .site-nav,
-      .user-nav {
-        display: flex;
-      }
+    &--opened .navigation__mobile {
+      display: flex;
     }
 
     &--nojs {
@@ -22,8 +16,7 @@
         display: none;
       }
 
-      & .site-nav,
-      .user-nav {
+      & .navigation__mobile {
         display: flex;
         position: static;
       }
