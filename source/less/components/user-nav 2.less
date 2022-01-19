@@ -1,0 +1,152 @@
+.user-nav {
+  background-color: @white;
+  .reset-list();
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    z-index: 1;
+    top: 239px;
+    left: 0;
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    border-bottom: 1px solid @border-lightgrey;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      width: calc(50vw - 525px);
+    }
+  }
+}
+
+.user-nav__item {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid @border-lightgrey;
+  padding-left: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding: 0;
+    border-top: none;
+    min-height: 87px;
+    display: flex;
+    align-items: center;
+
+    &--search {
+      width: 82px;
+      border-left: 1px solid #e6e6e6;
+      border-right: 1px solid #e6e6e6;
+    }
+
+    &--cart {
+      flex-grow: 1;
+
+      &::after {
+        content: "";
+        background-color: @white;
+        width: 50px;
+        height: calc(100% + 1px);
+        position: absolute;
+        right: -50px;
+        top: 0;
+        border-bottom: 1px solid @border-lightgrey;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+
+    &--cart {
+      flex-grow: 0;
+
+      &::after {
+        width: calc(50vw - 525px);
+        right: calc((50vw - 525px) * -1);
+      }
+    }
+  }
+}
+
+.user-nav__link {
+  display: block;
+  padding: 28px 8px 27px 45px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  color: @black;
+  text-align: start;
+  position: relative;
+
+  &:hover {
+    color: fade(@black, 60%);
+
+    & .user-nav__icon {
+      fill: @green;
+    }
+  }
+
+  &:focus {
+    opacity: 0.6;
+
+    & .user-nav__icon {
+      fill: @green;
+    }
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+
+    & .user-nav__icon {
+      fill: fade(@green, 30%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 32px 0 31px;
+
+    &--search {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 50%;
+    }
+
+    &--cart {
+      padding-left: 84px;
+    }
+  }
+}
+
+.user-nav__icon {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: fade(@black, 30%);
+
+  @media (min-width: @tablet-width) {
+    left: 32px;
+
+    &--cart {
+      right: auto;
+      width: 21px;
+      height: 18px;
+    }
+  }
+}
+
+.user-nav__span {
+  @media (min-width: @tablet-width) {
+    &--search {
+      display: none;
+    }
+  }
+}
