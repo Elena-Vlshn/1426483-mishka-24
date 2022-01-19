@@ -7,7 +7,7 @@
 
 .slider__list {
   .reset-list();
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -23,7 +23,8 @@
 .slider__text {
   font-size: 15px;
   line-height: 30px;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
+  margin-top: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
@@ -33,7 +34,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 40px;
-    padding-right: 100px;
+    padding-right: 50px;
   }
 }
 
@@ -46,13 +47,26 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .slider__author-link {
   display: block;
   font-style: italic;
   font-weight: 400;
-  line-height: 35px;
+  padding-top: 6px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .slider__control {
@@ -71,7 +85,7 @@
 
 .slider__button {
   width: 130px;
-  height: 50px;
+  min-height: 52px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -98,6 +112,5 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    background-position: center 8px;
   }
 }

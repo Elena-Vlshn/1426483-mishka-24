@@ -71,6 +71,14 @@
   @media (min-width: @tablet-width) {
     grid-column: 1/2;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     &::before {
       content: "";
       background-color: @white;
@@ -140,7 +148,7 @@
     align-self: stretch;
     align-items: center;
 
-    &.site-nav {
+    &--site-nav {
       order: 2;
       justify-content: start;
       column-gap: 20px;
@@ -148,12 +156,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    &.user-nav {
+    &--user-nav {
       order: 3;
       justify-content: flex-end;
     }
 
-    &.site-nav {
+    &--site-nav {
       order: 1;
       column-gap: 36px;
     }
