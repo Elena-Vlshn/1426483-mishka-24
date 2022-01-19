@@ -13,21 +13,27 @@
     min-height: 42px;
   }
 
-  &:hover .control__mark {
-    border-color: #62d1ba;
-  }
-
-  &:active .control__mark {
-    border-color: fade(@grey, 30%);
-  }
-
   @media (min-width: @tablet-width) {
-    padding-left: 80px;
+    padding-left: 81px;
     min-height: 52px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
+  }
+}
+
+.control__input {
+  &:hover + .control__mark {
+    border-color: #62d1ba;
+  }
+
+  &:focus + .control__mark {
+    border-color: #62d1ba;
+  }
+
+  &:active + .control__mark {
+    border-color: fade(@grey, 30%);
   }
 }
 
@@ -101,5 +107,11 @@
     height: 52px;
     top: 0;
     left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--checkbox {
+      top: -2px;
+    }
   }
 }

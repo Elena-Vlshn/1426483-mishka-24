@@ -38,7 +38,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 
     &::after {
       height: 34px;
@@ -170,6 +170,11 @@
     @media (min-width: @tablet-width) {
       min-height: 124px;
     }
+  }
+
+  &:focus {
+    transform: translateY(-5px);
+    outline: none;
   }
 
   &:active {

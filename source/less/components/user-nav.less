@@ -85,10 +85,26 @@
 
   &:hover {
     color: fade(@black, 60%);
+
+    & .user-nav__icon {
+      fill: @green;
+    }
+  }
+
+  &:focus {
+    opacity: 0.6;
+
+    & .user-nav__icon {
+      fill: @green;
+    }
   }
 
   &:active {
     color: fade(@black, 30%);
+
+    & .user-nav__icon {
+      fill: fade(@green, 30%);
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -97,6 +113,8 @@
     &--search {
       display: flex;
       justify-content: center;
+      width: 100%;
+      padding: 50%;
     }
 
     &--cart {
@@ -113,14 +131,6 @@
   left: 0;
   margin: auto;
   fill: fade(@black, 30%);
-
-  &:hover {
-    fill: @green;
-  }
-
-  &:active {
-    fill: fade(@green, 30%);
-  }
 
   @media (min-width: @tablet-width) {
     left: 32px;

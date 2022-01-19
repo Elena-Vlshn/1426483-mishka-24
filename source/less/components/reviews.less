@@ -5,12 +5,13 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 160px;
+    margin-bottom: 155px;
     padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 50px;
+    margin-bottom: 160px;
   }
 }
 
@@ -43,7 +44,7 @@
     background-image: url("../img/review.jpg");
     background-repeat: no-repeat;
     background-size: 350px auto;
-    padding: 80px 50px 46px 50px;
+    padding: 80px 50px 50px 50px;
     display: grid;
     grid-template-columns: 1fr 175px;
     row-gap: 40px;
@@ -51,7 +52,7 @@
 
     &::after {
       height: 17px;
-      bottom: -90px;
+      bottom: -86px;
       background-size: auto 17px;
     }
 
@@ -64,6 +65,7 @@
     padding: 78px 0 96px 175px;
     max-width: 1050px;
     margin: 0 auto;
+    row-gap: 37px;
 
     &::after {
       height: 23px;
